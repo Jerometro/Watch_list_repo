@@ -1,0 +1,17 @@
+<h1><%= @list.name.upcase %> playlist</h1>
+
+<ul>
+  <% @list.movies.each do |movie| %>
+    <p><strong><%= movie.title %></strong><p>
+    <%= movie.overview %><br>
+    Rating <%= movie.rating %>/10<br>
+    <%= link_to "Lien vers l'image", movie.poster_url,:target => "_blank" %><br><br>
+  <% end %>
+
+  <%= link_to "Add a bookmark to this list", new_list_bookmark_path(@list), class: "btn btn-primary"%>
+  <%= link_to "Back to playlists", lists_path, class: "btn btn-warning" %><br>
+</ul>
+
+
+
+

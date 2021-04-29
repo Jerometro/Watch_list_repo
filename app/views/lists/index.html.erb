@@ -1,0 +1,8 @@
+<h1>Playlists index</h1>
+<ul>
+  <% @lists.each do |list| %>
+    <%= list.name %>
+    <%= link_to "show", list_path(list)%><br>
+  <% end %><br>
+  <%= link_to "Add a new list", new_list_path, class: "btn btn-primary" %><br>
+</ul>
