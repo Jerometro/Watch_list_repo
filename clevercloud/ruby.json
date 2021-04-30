@@ -1,4 +1,3 @@
-# clevercloud/ruby.json
 {
   "deploy": {
     "rakegoals": ["assets:precompile", "db:migrate"]
