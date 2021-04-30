@@ -7,7 +7,7 @@
     <%= movie.overview %><br>
     Rating <%= movie.rating %>/10<br>
     <%= link_to "See the Cover", movie.poster_url,:target => "_blank"%><br><br>
-    <%= link_to "Delete", bookmark_path(list),
+    <%= link_to "Delete", bookmark_path,
             method: :delete,
             data: { confirm: "Are you sure?" },
             color: $red%>
