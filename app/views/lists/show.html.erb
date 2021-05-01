@@ -1,13 +1,18 @@
 <h1><%= @list.name.upcase %> playlist</h1>
+
 <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
 
 <ul>
   <% @list.movies.each do |movie| %>
     <p><strong><%= movie.title %></strong><p>
+
     <%= movie.overview %><br>
+
     Rating <%= movie.rating %>/10<br>
+
     <%= link_to "See the Cover", movie.poster_url,:target => "_blank"%><br><br>
-    <%= link_to "Delete", bookmark_path,
+
+    <%= link_to "Delete", bookmark_path(movie),
             method: :delete,
             data: { confirm: "Are you sure?" },
             color: $red%>

@@ -14,6 +14,21 @@ Movie.create(title: "The Shawshank Redemption", overview: "Framed in the 1940s f
 Movie.create(title: "Titanic", overview: "101-year-old Rose DeWitt Bukater tells the story of her life aboard the Titanic.", poster_url: "https://image.tmdb.org/t/p/original/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg", rating: 7.9)
 Movie.create(title: "Ocean's Eight", overview: "Debbie Ocean, a criminal mastermind, gathers a crew of female thieves to pull off the heist of the century.", poster_url: "https://image.tmdb.org/t/p/original/MvYpKlpFukTivnlBhizGbkAe3v.jpg", rating: 7.0)
 
-List.create(name: "Drama")
-List.create(name: "Girl power")
-List.create(name: "Adventure")
+# List.create(name: "Drama")
+# List.create(name: "Girl power")
+# List.create(name: "Adventure")
+
+# @list_drama = List.find_by(name: 'Drama')
+# @bookmarks = @list_drama.bookmarks
+# @bookmarks.destroy
+# @list_drama.destroy
+
+# @list_girlpower = List.find_by(name: 'Girl power')
+# @bookmarks = @list_girlpower.bookmarks
+# @bookmarks.destroy
+# @list_girlpower.destroy
+
+# @list_adventure = List.find_by(name: 'Adventure')
+# @bookmarks = @list_adventure.bookmarks
+# @bookmarks.destroy
+# @list_adventure.destroy
