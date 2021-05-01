@@ -22,6 +22,14 @@ class ListsController < ApplicationController
     end
   end
 
+  def destroy
+    @list = List.find(params[:id])
+    @bookmarks = @list.bookmarks
+    @bookmarks.destroy
+    @list.destroy
+    redirect_to root_path, notice: 'Votre liste a bien été supprimée !'
+  end
+
   private
 
   def list_params

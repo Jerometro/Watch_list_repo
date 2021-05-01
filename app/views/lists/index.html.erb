@@ -2,7 +2,13 @@
 <ul>
   <% @lists.each do |list| %>
     <%= list.name %>
-    <%= link_to "show", list_path(list)%><br>
+    <%= link_to "show", list_path(list)%>
+
+    <%= link_to "Delete", list_path(list),
+            method: :delete,
+            data: { confirm: "Are you sure?" },
+            color: $red%><br>
+
   <% end %><br>
   <%= link_to "Add a new list", new_list_path, class: "btn btn-primary" %><br>
 </ul>
