@@ -1,6 +1,14 @@
+
 <%= simple_form_for(@list) do |f| %>
   <%= f.input :name %>
+  <p style="color:white;">Playlist name</p>
+
   <%= f.input :photo, as: :file %>
+
   <%= f.button :submit, class: "btn btn-success" %>
   <%= link_to "Back to lists", root_path, class: "btn btn-warning" %><br>
 <% end %>
+
+<!-- <div >
+  <img src= <%= @photo %> >
+</div> -->

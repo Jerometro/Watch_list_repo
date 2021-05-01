@@ -9,6 +9,8 @@ class BookmarksController < ApplicationController
     @list = List.find(params[:list_id]) # necessaire pour rediriger le user vers la page list_path(@list)
     @bookmark.list = @list # necessaire pour creer le bookmark --> c'est le list_id
 
+    # @photo = Bookmark.find(params[:photo])
+
     if @bookmark.save
       redirect_to list_path(@list), notice: 'Votre bookmark a bien été ajouté !'
     else

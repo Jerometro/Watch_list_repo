@@ -5,21 +5,16 @@
 
 
 <div class="cards">
-  <% @lists.each do |list| %>
+  <div class="row">
+      <% @lists.each do |list| %>
 
-    <div class="card">
-      <div class="card_img">
-        <%= link_to image_tag(list.photo), list_path(list) %>
-      </div>
-<!--           <img src="<%= (url_for(list.photo)) %>">
--->      <h2><strong><%= list.name.upcase %></strong></h2>
-
-<!--         <div class="card_text">
-          <%= link_to "Delete", list_path(list),
-                method: :delete,
-                data: { confirm: "Are you sure?" } %>
-        </div> -->
-    </div>
-  <% end %>
+        <div class="card" col-6 col-md-9 col-lg-12>
+          <div class="card_img">
+            <%= link_to image_tag(list.photo), list_path(list) %>
+          </div>
+            <h2><strong><%= list.name.upcase %></strong></h2>
+          </div>
+      <% end %>
+  </div>
 </div>
 
