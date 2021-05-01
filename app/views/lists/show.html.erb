@@ -1,31 +1,41 @@
-<h1><%= @list.name.upcase %> playlist</h1>
+<div class="playlist_title">
+  <h1><%= @list.name.upcase %></h1>
+</div>
 
-<%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
+<div class="movies_container">
+  <div class="row">
+      <% @list.bookmarks.each do |bookmark| %>
+        <div class="movie" col-12 col-lg-6>
 
-<ul>
-  <% @list.bookmarks.each do |bookmark| %>
+          <div class="movie_img">
+            <%= cl_image_tag bookmark.movie.poster_url, :height=>250, :crop=>"scale"%>
+          </div>
+          <div class="movie_text">
+            <div class="movie_title_rating">
+              <strong><%= bookmark.movie.title %></strong><%= bookmark.movie.rating %> &#11088<br><br>
+            </div>
+            <%= bookmark.movie.overview %><br><br>
 
-    <p><strong><%= bookmark.movie.title %></strong><p>
+            Your Comment : <%= bookmark.comment %><br>
 
-    Overview : <%= bookmark.movie.overview %><br>
+            <%= link_to "Delete the movie", bookmark_path(bookmark),
+                    method: :delete,
+                    data: { confirm: "Are you sure?" },
+                    color: $FD1015%>
+          </div>
+        </div>
+      <% end %>
+  </div>
+</div>
 
-    Rating : <%= bookmark.movie.rating %>/10<br>
+<div>
 
-    Comment : <%= bookmark.comment %><br>
-
-    <%= link_to "See the Cover", bookmark.movie.poster_url,:target => "_blank"%><br><br>
-
-    <%= link_to "Delete", bookmark_path(bookmark),
-            method: :delete,
-            data: { confirm: "Are you sure?" },
-            color: $red%>
-  <% end %>
-<br>
-<br>
+<div class="playlist_btns">
   <%= link_to "Add a bookmark to this list", new_list_bookmark_path(@list), class: "btn btn-primary"%>
-  <%= link_to "Back to playlists", root_path, class: "btn btn-warning" %><br>
-</ul>
+  <%= link_to "Back to playlists", root_path, class: "btn btn-success" %><br>
 
-
-
-
+<%= link_to "Delete the playlist", list_path(@list),
+    method: :delete,
+    data: { confirm: "Are you sure?" },
+    class: "btn btn-warning" %>
+</div>

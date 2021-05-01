@@ -1,0 +1,57 @@
+.playlist_title {
+  color: white;
+  margin: 10px 0px;
+  opacity: 0.7;
+  letter-spacing: 30px;
+  text-align: center;
+}
+
+.playlist_btns {
+  display:flex;
+  justify-content: between ;
+  // background-color: yellow;
+  padding: 15px 0px
+}
+
+.movies_container {
+  display:flex;
+  justify-content: space-around ;
+}
+
+.row {
+  justify-content: space-around ;
+}
+
+.movie {
+  display:flex;
+  width: 550px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #FFFF;
+  margin: 20px 0px;
+  background-color: #fcfcfc;
+  margin: 15px;
+}
+
+.movie_img {
+  width: 100%;
+  text-align: center;
+
+  // background-image: url(<%= bookmark.movie.poster_url %>);
+  // // width: 175px;
+  // max-width: 300px;
+  // max-height: 200px;
+}
+
+
+.movie_text {
+  text-align: bottom;
+  padding: 10px 10px;
+  // background-color: grey;
+  font-size: 12px;
+}
+
+.movie_title_rating {
+  display:flex;
+  justify-content: space-between ;
+  font-size: 18px;
+}
