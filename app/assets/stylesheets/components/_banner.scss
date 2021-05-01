@@ -1,0 +1,18 @@
+.banner {
+  // background-image: url(../../images/cinema_background.jpg);
+  background-image: url("https://images.pexels.com/photos/458379/pexels-photo-458379.jpeg?cs=srgb&dl=pexels-pixabay-458379.jpg&fm=jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 175px 0;
+
+  h1 {
+    color: white;
+    padding-left: 125px;
+  }
+
+  h2 {
+    color: white;
+    padding-left: 125px;
+    padding-top: 30px;
+  }
+}

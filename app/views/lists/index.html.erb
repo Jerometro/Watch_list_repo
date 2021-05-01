@@ -1,15 +1,29 @@
-<h1>Playlists index</h1>
-<ul>
-  <% @lists.each do |list| %>
-    <%= list.name %>
-    <%= link_to "show", list_path(list)%>
+<div class="banner">
+  <h1>Make your own movie playlists</h1>
+  <h2><%= link_to "New playlist", new_list_path, class: "btn btn-primary"%></h2>
+</div>
 
-    <%= link_to "Delete", list_path(list),
-            method: :delete,
-            data: { confirm: "Are you sure?" },
-            color: $red%><br>
 
-  <% end %><br>
-  <%= link_to "Add a new list", new_list_path, class: "btn btn-primary" %><br>
-</ul>
+<!-- <div class="container">
+ -->
+  <div class="cards">
+    <% @lists.each do |list| %>
+
+      <div class="card">
+          <img src="<%= (url_for(list.photo)) %>">
+          <p><strong><%= list.name.upcase %></strong></p>
+
+          <div class="card_text">
+            <%= link_to "Show", list_path(list)%>
+            <%= link_to "Delete", list_path(list),
+                      method: :delete,
+                      data: { confirm: "Are you sure?" },
+                      color: $red%>
+          </div>
+      </div>
+    <% end %>
+  </div>
+
+<!-- </div>
+ -->
 
