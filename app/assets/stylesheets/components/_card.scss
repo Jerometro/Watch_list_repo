@@ -1,5 +1,5 @@
 .card {
-  width: 200px;
+  width: 175px;
   border-radius: 3px;
   box-shadow: 0 0 5px rgb(230,230,230);
   text-align: center;
@@ -8,17 +8,22 @@
   margin: 20px 0px;
   background-color: #0f0e0e;
 
-  p{
+
+  h2{
     color: white;
+    font-size: 18px;
   }
 
   img {
-    background-size: cover;
+    width: 100%;
   }
 }
 
 .card_text {
-  display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin: 0px 30px;
 }
+
+// .card_img {
+//   width : 200px;
+// }
