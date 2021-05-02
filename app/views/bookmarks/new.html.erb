@@ -2,9 +2,24 @@
   <h1><%= @list.name.upcase %></h1>
 </div>
 
-<%= simple_form_for [@list, @bookmark] do |f| %>
-  <%= f.input :comment %>
-  <%= f.association :movie %>
-  <%= f.button :submit, class: "btn btn-success" %>
-  <%= link_to 'Back to the list', list_path(@list), class: " btn btn-warning" %>
-<% end %>
+<div class="new_playlist">
+  <div class="playlist_fields">
+    <%= simple_form_for [@list, @bookmark] do |f| %>
+      <%= f.input :comment, :placeholder => 'Add a comment' %>
+      <%= f.association :movie, input_html: { id: "selection" }, prompt: "Select a movie" %>
+
+      <%= f.button :submit, class: "btn btn-success" %>
+      <%= link_to 'Back to the list', list_path(@list), class: " btn btn-warning" %>
+
+
+      <li></li>
+
+
+
+<!--       <img src="<%=(url_for(@user_photo))%>" alt="">
+ -->
+    <% end %>
+  </div>
+
+<!--   <button class="btn btn-lg btn-success">Click me!</button>
+ -->

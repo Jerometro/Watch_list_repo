@@ -9,7 +9,20 @@
 .playlist_btns {
   display:flex;
   justify-content: between ;
-  padding: 15px 0px
+  padding: 15px 0px;
+  // position: sticky;
+  // top: 0;
+}
+
+
+.playlist_fields {
+  width : 700px;
+  text-align: center;
+}
+
+.new_playlist{
+  display:flex;
+  justify-content: center;
 }
 
 .movies_container {
