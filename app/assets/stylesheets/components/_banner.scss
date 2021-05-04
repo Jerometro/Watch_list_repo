@@ -1,7 +1,5 @@
 .banner {
-  // background-image: url("https://images.pexels.com/photos/458379/pexels-photo-458379.jpeg?cs=srgb&dl=pexels-pixabay-458379.jpg&fm=jpg");
-
-  background-image: url('cinema.jpg');
+  background-image: asset-url('cinema.jpg');
   background-size: cover;
   background-position: center;
   padding: 175px 0;
