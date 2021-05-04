@@ -1,4 +1,4 @@
-.playlist_title {
+.playlist_and_bookmark_title {
   color: white;
   margin: 10px 0px;
   opacity: 0.7;
@@ -14,15 +14,16 @@
   // top: 0;
 }
 
-
-.playlist_fields {
-  width : 700px;
+.new_playlist_form {
+  width : 350px;
   text-align: center;
+  margin: auto;
 }
 
-.new_playlist{
-  display:flex;
-  justify-content: center;
+.bookmark_form {
+  width : 400px;
+  text-align: center;
+  margin: auto;
 }
 
 .movies_container {
