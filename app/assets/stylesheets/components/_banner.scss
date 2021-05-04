@@ -1,5 +1,11 @@
 .banner {
   background-image: asset-url('cinema.jpg');
+  // Les navigateurs web stockent l'image dans leur cache avec un identifiant.
+  // Si l'image n'a pas changée depuis le dernier chargement, les navigateurs ne la rechargent pas.
+  // asset-url permet de donner un identifiant nouveau à l'image à chaque refresh de la page
+  // pour que les navigateurs la recharge à chaque fois.
+  // Ainsi, si je change l'image dans le code, l'utilisateur la voit au prochain refresh.
+
   background-size: cover;
   background-position: center;
   padding: 175px 0;
